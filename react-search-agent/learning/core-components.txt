@@ -1,0 +1,50 @@
+2. Core Components of a LangChain ReAct Agent
+
+    ReAct = Reasoning + Acting
+    This framework is built on 3 core components:
+
+    (a) LLM (Large Language Model)
+
+        The brain of the agent.
+        It’s responsible for reasoning — deciding what to do next.
+        The LLM reads the prompt, interprets tool results, and figures out the next step.
+
+    (b) Tools
+
+        These are actions the agent can take — like calculators, APIs, or database queries.
+        Each tool has:
+
+        A name
+
+        A description of when to use it
+
+        A function that executes the action
+
+        Example tools:
+
+            SearchTool → searches the web
+
+            Calculator → performs math
+
+            PythonREPL → runs Python code
+
+    (c) Prompt Structure
+
+        This defines how the agent thinks and acts.
+        The prompt usually includes:
+
+        System message: Explains the role and behavior of the agent.
+
+        Examples: Show how to format thoughts, actions, and observations.
+
+        User input: The current question or task.
+
+    The ReAct prompt encourages the model to reason step-by-step like this:
+
+        Question: {user input}
+        Thought: I should use {Tool} to find...
+        Action: {tool name}
+        Action Input: {input to the tool}
+        Observation: {tool result}
+        Thought: Now that I know this, I can...
+        Final Answer: {final output to the user}

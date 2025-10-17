@@ -1,0 +1,30 @@
+3. The Iterative Thought–Action–Observation Loop
+
+    This is the core reasoning loop that drives ReAct agents.
+
+    Each iteration works like this:
+
+    Step	            Description
+    Thought	            The agent reasons about the current state: “What do I know? What should I do next?”
+    Action	            The agent decides on an action (like calling a tool) and executes it.
+    Observation	        The agent receives and interprets the result of that action.
+
+    Then it loops back:
+        → The new observation feeds into the next thought, refining the reasoning.
+
+    Eg.
+        Question: What’s the square root of the current temperature in Hyderabad?
+
+        Thought: I need to find the current temperature first.
+        Action: WeatherAPI
+        Action Input: "Hyderabad"
+
+        Observation: 36°C
+
+        Thought: Now I can compute the square root of 36.
+        Action: Calculator
+        Action Input: "sqrt(36)"
+
+        Observation: 6
+
+        Final Answer: The square root of the current temperature in Hyderabad is 6.

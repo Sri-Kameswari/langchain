@@ -1,0 +1,32 @@
+4. How the Agent Uses Observations to Refine Its Thoughts
+
+    Each observation becomes new knowledge for the agent.
+
+    Here’s how refinement works:
+
+        a) The LLM looks at the latest observation.
+
+        b) It updates its context — “Now I know X.”
+
+        c) It rethinks the next best step based on this new info.
+
+    This allows the agent to:
+
+        Correct earlier assumptions
+
+        Handle multi-step reasoning
+
+        Chain multiple tools intelligently
+
+    So it’s like a human saying:
+
+        “I tried this, saw the result, and now I realize I should take a different approach.”
+
+
+    ReAct agents are dynamic — their reasoning adapts to what they discover:
+
+        If a tool returns unexpected output, the agent can change its plan.
+
+        If a tool fails, the LLM can recover (“The tool didn’t return data, maybe I should try another.”).
+
+        If partial information is found, it can fill gaps by rethinking what’s missing.

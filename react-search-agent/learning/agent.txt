@@ -1,0 +1,36 @@
+1. What is an Agent?
+
+    An agent in LangChain (and AI in general) is like a decision-making engine that:
+
+        Thinks about a user’s query,
+
+        Decides which tools (APIs, databases, functions) to use,
+
+        Acts by using those tools,
+
+        Observes the result,
+
+        And then reasons again based on that new information.
+
+    👉 In short:
+
+        An agent is an AI system that autonomously decides what actions to take to achieve a goal — instead of just generating one-off text responses.
+
+    For example:
+        If you ask, “What’s the current temperature in Hyderabad and how does it compare to yesterday?”
+        → The agent doesn’t know the answer directly.
+            It will:
+
+            Think: “I need the current temperature.”
+
+            Use a weather API tool.
+
+            Observe the result.
+
+            Think again: “Now I need yesterday’s data.”
+
+            Use the same tool again.
+
+            Observe and compare.
+
+            Finally, generate a final answer for you.
